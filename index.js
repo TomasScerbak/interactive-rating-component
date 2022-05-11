@@ -20,6 +20,7 @@ backArrow.addEventListener('click', function(e) {
         })
     secondaryCard.classList.add('is-hidden');
     card.classList.remove('is-hidden');
+    button.disabled = true;
     })
 
 // showing which rating has been selected out of 5 and changing background color of rating cirle
@@ -32,6 +33,7 @@ ratingList.forEach(item => {
         const background = e.target;
         background.classList.add('rating-active');
         selection.innerHTML = `You selected ${rating} out of 5`;
+        button.removeAttribute('disabled');
 	}
 	)
 })
